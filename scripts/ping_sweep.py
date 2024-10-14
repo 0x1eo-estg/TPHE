@@ -35,11 +35,11 @@ def ping_sweep(range_ip, outdir):
 
     print(f"\n[*] Found {res} live hosts")
     print(f"[*] Created target list: {outfile}")
-    print(f"[*] Run mix_port_scan.sh -t {outfile} -p all\n")
+    print(f"[*] Run port_sweep.sh -t {outfile} -p all\n")
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: script.py <IP_RANGE> <OUTPUT_DIRECTORY>")
+        print("Usage: ping_sweep.py <IP_RANGE> <OUTPUT_DIRECTORY>")
         sys.exit(1)
 
     ip_range = sys.argv[1].strip()
